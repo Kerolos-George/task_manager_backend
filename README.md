@@ -20,8 +20,8 @@ A Node.js API for managing tasks with CRUD functionality. Users can register, lo
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/task-manager-api.git
-cd task-manager-api
+git clone https://github.com/Kerolos-George/Task_Manger_BackEnd.git
+cd Task_Manger_BackEnd
 ```
 
 ### Install Dependencies
