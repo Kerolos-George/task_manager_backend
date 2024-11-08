@@ -57,7 +57,7 @@ class UserService {
      
             return {token};
         } catch (error) {
-            console.error('Login error:', error);
+            
             throw new Error('Failed to login');
         }
     }

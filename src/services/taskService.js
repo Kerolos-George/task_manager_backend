@@ -17,10 +17,20 @@ class TaskService {
     }
 
     static async updateTask(taskId, userId, taskData) {
-      
+        // Create a filtered object with only allowed fields
+        const allowedUpdates = ['title', 'description', 'status'];
+        const updates = {};
+    
+        allowedUpdates.forEach((field) => {
+            if (taskData[field] !== undefined) {
+                updates[field] = taskData[field];
+            }
+        });
+    
+        // Update only the fields that are in the updates object
         return await Task.findOneAndUpdate(
             { _id: taskId, user_id: userId },
-            { $set: taskData },
+            { $set: updates },
             { new: true, runValidators: true }
         );
     }
